@@ -69,17 +69,18 @@ export function GalleryHoverGrid({ items, defaultCols = { base: 2, md: 4, lg: 6 
               neighbor && "scale-[1.03]"
             )}
           >
-            <Tilt options={{ max: 10, glare: true, "max-glare": 0.2, scale: 1.01 }} className="w-full h-full">
+            <Tilt options={{ max: 10, glare: true, "max-glare": 0.2, scale: 1.01, reverse: true, perspective: 600 }}  className="w-full h-full flex justify-center items-center parallax">
               <Image
                 src={it.src || "/placeholder.svg"}
                 alt={it.alt}
                 fill
                 className={cn(
-                  "object-cover transition-transform duration-800",
+                  "object-cover transition-transform duration-800 ",
                   isH ? "scale-110" : "scale-100"
                 )}
                 sizes="(max-width: 1024px) 33vw, 16vw"
               />
+              <h1 className="absolute inner-element mt-[20%] text-white rounded-lg bg-violet-600/30 px-2  text-xl font-bold">{it.desc || "Description"}</h1>
             </Tilt>
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-transparent to-white/[0.02]" />
           </div>

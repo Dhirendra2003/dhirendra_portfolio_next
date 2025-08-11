@@ -10,7 +10,7 @@ export const data = {
   },
   skills: {
     languages: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Python", "UI design"],
-    fullstack: ["Full-Stack development", "React JS", "Express JS", "Node JS", "Django", "Next JS"],
+    fullstack: [ "React JS", "Express JS", "Node JS", "Django", "Next JS"],
     tools: ["Figma", "Postman", "Canva", "Framer Motion", "GSAP", "ShadCN UI", "Tailwind CSS", "Blender 3D", "Jest", "Vitest", "Docker", "Stripe"],
     databases: ["MongoDB", "MySQL", "PostgreSQL"],
     familiar: ["Manual testing", "Data analysis", "Web scraping", "Java", "Graphic design"],

@@ -70,7 +70,7 @@ export default function Card08({
   console.log(stack_img_array);
   console.log(orientation)
   return (
-    <div className={`w-full flex ${orientation === 'left' ? 'flex-row' : 'flex-row-reverse'} items-center gap-10 justify-even`}>
+    <div className={`w-full flex ${orientation === 'left' ? 'flex-row' : 'flex-row-reverse'} items-center gap-20 justify-even`}>
     <Link href={href} target="_blank" className="block w-full max-w-[50%] group">
       <div
         className={cn(
@@ -138,13 +138,13 @@ export default function Card08({
         </div>
       </div>
     </Link>
-    <div className="flex flex-col  gap-5 max-w-96 ">
+    <div className="flex flex-col  gap-5  max-w-[45%]">
       {/* project description : languages, techstack , description */}
-      <p className={`text-2xl text-${orientation==="left" ? "left" : "right"}   text-zinc-200 dark:text-zinc-300  tracking-tight`}>
+      <p className={`text-2xl text-${orientation==="left" ? "left" : "right"}    text-zinc-200 dark:text-zinc-300  tracking-tight`}>
         <b>Languages:</b> {project_detail.languages}
       </p>
       <div className="flex flex-col">
-      <p className={`text-2xl text-${orientation==="left" ? "left" : "right"}  text-zinc-200 dark:text-zinc-300  tracking-tight`}>
+      <p className={`text-2xl text-${orientation==="left" ? "left" : "right"}   text-zinc-200 dark:text-zinc-300  tracking-tight`}>
         <b>Tech Stack:</b> 
       </p>
       <div className={`flex flex-wrap gap-2 my-2 ml-${orientation === 'left' ? '0' : 'auto'}`}>
