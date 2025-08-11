@@ -74,10 +74,10 @@ export default function Card08({
     <Link href={href} target="_blank" className="block w-full max-w-[50%] group">
       <div
         className={cn(
-          "relative overflow-hidden rounded-2xl",
+          "relative overflow-hidden rounded-xl",
           "bg-white/80 dark:bg-zinc-900/80",
           "backdrop-blur-xl",
-          "border border-white border-[2px]",
+          " border-neutral-700 border-[2px]",
           "shadow-xs",
           "transition-all duration-800",
           "hover:shadow-md",

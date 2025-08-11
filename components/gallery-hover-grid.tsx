@@ -48,7 +48,7 @@ export function GalleryHoverGrid({ items, defaultCols = { base: 2, md: 4, lg: 6 
 
   return (
     <div
-      className="grid gap-3"
+      className="grid gap-16"
       style={{
         gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
       }}
@@ -64,7 +64,7 @@ export function GalleryHoverGrid({ items, defaultCols = { base: 2, md: 4, lg: 6 
             onMouseEnter={() => setHovered(idx)}
             onMouseLeave={() => setHovered(null)}
             className={cn(
-              "relative aspect-square overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] transition-all duration-300",
+              "relative aspect-[4/2] overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] transition-all duration-800",
               isH && "z-10 scale-[1.08] shadow-2xl shadow-fuchsia-500/20",
               neighbor && "scale-[1.03]"
             )}
@@ -75,7 +75,7 @@ export function GalleryHoverGrid({ items, defaultCols = { base: 2, md: 4, lg: 6 
                 alt={it.alt}
                 fill
                 className={cn(
-                  "object-cover transition-transform duration-500",
+                  "object-cover transition-transform duration-800",
                   isH ? "scale-110" : "scale-100"
                 )}
                 sizes="(max-width: 1024px) 33vw, 16vw"

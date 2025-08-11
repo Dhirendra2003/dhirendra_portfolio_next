@@ -19,6 +19,9 @@ import Navbar from "@/components/navbar"
 import Skills from "@/components/skills"
 import CardGrid from "@/components/card-grid"
 import WorkExperience from "@/components/exp"
+import QuoteGrid from "@/components/quote-grid"
+import Card08Props from "@/components/card-project"
+import Footer from "@/components/footer"
 
 const collections: Card08Props[] = [
   {
@@ -68,7 +71,7 @@ const collections: Card08Props[] = [
     href: "https://bidbazaar.onrender.com/",
     project_detail: {
       languages: "JavaScript, SQL",
-     tech_stack: "react, nodejs, express, aws, websocket",
+      tech_stack: "react, nodejs, express, aws, websocket",
       description: "Live bidding application with real-time updates and AWS integration."
     }
   },
@@ -140,6 +143,7 @@ export default function Page() {
   // const textColor = useTransform(textLightness, (l) => `hsl(0 0% ${l}%)`)
 
   return (
+    <>
     <main id="hero" className="relative min-h-[200vh] overflow-x-clip px-20 bg-gradient-to-b from-black to-black">
       {/* Scroll-reactive background layer */}
       <motion.div
@@ -220,7 +224,7 @@ export default function Page() {
                   />
                   <div className="p-4">
                     <div className="font-semibold">Dhirendra Shinde</div>
-                    <div className="text-sm text-muted-foreground">Pune, India</div>
+                    <div className="text-sm text-neutral-300">Pune, India</div>
                   </div>
                 </div>
               </Tilt>
@@ -233,9 +237,9 @@ export default function Page() {
       <Skills data={data} />
 
       {/*WorkExperience   */}
-       <section id="experience" className="container mx-auto px-6 py-10 md:py-14">
+      <section id="experience" className="container mx-auto px-6 py-10 md:py-14">
         <h3 className="text-2xl md:text-4xl text-white font-semibold mt-12">Experience</h3>
-      <WorkExperience />
+        <WorkExperience />
       </section>
 
       {/* PROJECTS */}
@@ -247,115 +251,33 @@ export default function Page() {
       {/* INTERACTIVE GALLERY GRID */}
       <section id="gallery" className="container mx-auto px-6 py-16 md:py-24">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="text-3xl md:text-4xl font-semibold">Interactive Gallery</h2>
-          <p className="text-muted-foreground">Hover to zoom the tile and subtly amplify neighbors.</p>
+          <h2 className="text-3xl md:text-4xl font-semibold">Creations Gallery</h2>
+          <p className="text-muted-foreground">Hover to see the magic</p>
         </div>
         <div className="mt-8">
           <GalleryHoverGrid
-            items={Array.from({ length: 18 }).map((_, i) => ({
+            items={Array.from({ length: 12 }).map((_, i) => ({
               id: i,
-              src: `/placeholder.svg?height=600&width=600&query=${encodeURIComponent("design or code showcase tile " + (i + 1))}`,
+              src: `/gallery/${i + 1}.webp`,
               alt: `Showcase tile ${i + 1}`,
             }))}
-            defaultCols={{ base: 2, md: 4, lg: 6 }}
+            defaultCols={{ base: 2, md: 2, lg: 2 }}
           />
         </div>
       </section>
+      </main>
+      
 
       {/* QUOTES MOSAIC */}
-      <section id="quotes" className="container mx-auto px-6 py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl font-semibold">Thoughts & Principles</h2>
-        <p className="text-muted-foreground mt-2">A colorful, asymmetric grid inspired by your reference.</p>
-
-        <div className="mt-8 quotes-grid">
-          {/* Big left gradient with contour */}
-          <div className="tile tile-gradient tile-contour p-6 md:p-8">
-            <p className="max-w-[24ch] text-lg md:text-xl font-semibold">
-              A passionate developer combining creativity and technical expertise to build dynamic and user-friendly digital experiences.
-            </p>
-          </div>
-          {/* Small gradient quote */}
-          <div className="tile tile-pastel p-6 md:p-8">
-            <p className="italic">{"Success belongs to those who dare to try, for in every attempt lies the seed of accomplishment."}</p>
-          </div>
-          {/* Dark tile with contour */}
-          <div className="tile tile-dark tile-contour p-6 md:p-8">
-            <p className="font-medium">
-              Developed web applications integrating dynamic content with REST APIs and MongoDB. Creative Solutions: UI/UX prototyping, workflow automation, and cloud integrations.
-            </p>
-          </div>
-          {/* Wide gradient quote */}
-          <div className="tile tile-gradient col-span-2 p-6 md:p-8">
-            <p className="font-semibold">
-              {"\"Coding isn't just solving problems; it's building solutions for tomorrow's challenges.\""}<br />
-              {"\"Innovation thrives on curiosity and persistence.\""}<br />
-              Through design and code, I create experiences that connect people and ideas.
-            </p>
-          </div>
-          {/* Interests & achievements */}
-          <div className="tile tile-pastel p-6 md:p-8">
-            <p className="font-semibold">#Interests</p>
-            <ul className="text-sm mt-2 space-y-1">
-              <li>Drawing</li>
-              <li>Calisthenics</li>
-              <li>Video Editing</li>
-            </ul>
-            <p className="font-semibold mt-4">#Achievements</p>
-            <ul className="text-sm mt-2 space-y-1">
-              <li>Hackathon</li>
-              <li>Sports comp winner</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <Button asChild size="lg" className="btn-pill">
-            <a href="/resume.pdf" download>Download My Resume</a>
-          </Button>
-        </div>
-
-        <p className="sr-only">
-          The quotes section layout and vibe follow the provided reference image with bold gradients and asymmetric tiles.
-        </p>
+      <section id="quotes" className="container mx-auto px-6 py-16 md:py-14">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-rose-500 mx-20">Thoughts & Principles</h2>
+        <QuoteGrid />
       </section>
 
+
       {/* FOOTER */}
-      <footer id="footer" className="container mx-auto px-6 py-16 md:py-24">
-        <div className="rounded-2xl border border-white/10 p-6 md:p-10 bg-white/[0.03]">
-          <div className="text-lg md:text-xl font-semibold">Social Media:</div>
-          <Separator className="my-4 opacity-30" />
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-            <FooterLink icon={<Instagram className="size-5" />} label="Instagram" href="https://instagram.com" />
-            <FooterLink icon={<Linkedin className="size-5" />} label="LinkedIn" href="https://www.linkedin.com/in/dhirendra-shinde-b9a826215" />
-            <FooterLink icon={<Github className="size-5" />} label="Github" href="https://github.com/Dhirendra2003" />
-            <FooterLink icon={<Twitter className="size-5" />} label="Twitter" href="https://x.com" />
-            <FooterLink icon={<Boxes className="size-5" />} label="SketchFab" href="https://sketchfab.com" />
-          </div>
-
-          <div className="mt-10 text-lg md:text-xl font-semibold">Contact Me:</div>
-          <div className="mt-4 flex flex-wrap items-center gap-x-10 gap-y-3 text-sm md:text-base">
-            <div className="inline-flex items-center gap-2">
-              <Mail className="size-5" />
-              <a href="mailto:shindedhirendra780@gmail.com" className="hover:underline">shindedhirendra780@gmail.com</a>
-            </div>
-            <div className="inline-flex items-center gap-2">
-              <Phone className="size-5" />
-              <a href="tel:+917507366162" className="hover:underline">+91 7507366162</a>
-            </div>
-            <div className="inline-flex items-center gap-2">
-              <Globe className="size-5" />
-              <a href="https://portfolio-react-psi-violet.vercel.app/" target="_blank" rel="noreferrer" className="hover:underline">
-                portfolio-react-psi-violet.vercel.app
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-10 text-xs opacity-60">
-            © {new Date().getFullYear()} Dhirendra Shinde. All rights reserved.
-          </div>
-        </div>
-      </footer>
-    </main>
+      <Footer/>
+    </>
   )
 }
 
@@ -396,7 +318,7 @@ export function TechCard({ title, list }: { title: string; list: string[] }) {
   )
 }
 
-function FooterLink({ icon, label, href }: { icon: React.ReactNode; label: string; href: string }) {
+export function FooterLink({ icon, label, href }: { icon: React.ReactNode; label: string; href: string }) {
   return (
     <a href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
       {icon}

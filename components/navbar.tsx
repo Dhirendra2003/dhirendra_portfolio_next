@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed -right-2 top-1/2 -translate-y-1/2 z-50 group">
-      <div className="flex flex-col gap-3 p-4 rounded-l-2xl bg-neutral-600/30 backdrop-blur-md border border-white/20 shadow-xl transition-all duration-500 ease-in-out hover:bg-white/15 group-hover:min-w-[200px] min-w-[56px] overflow-w-0">
+      <div className="flex flex-col gap-3 p-4 rounded-l-2xl bg-neutral-800/50 backdrop-blur-md border border-white/20 shadow-xl transition-all duration-500 ease-in-out  group-hover:min-w-[200px] min-w-[56px] overflow-w-0">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = activeSection === item.id
