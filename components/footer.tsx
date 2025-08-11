@@ -5,7 +5,7 @@ import { Boxes, Github, Globe, Instagram, Linkedin, Mail, Phone, Twitter } from 
 
 const Footer = () => {
   return (
-    <footer id="footer" className=" px-6 py-16 md:py-12 bg-gradient-to-b from-white to-black ">
+    <footer id="footer" className=" px-6 py-16 md:py-12 bg-black ">
         <div className="rounded-2xl border border-white/10 p-6 md:p-10  text-black bg-spline ">
           <div className="text-2xl md:text-2xl font-semibold">Social Media:</div>
           <Separator className="my-4 opacity-30" />

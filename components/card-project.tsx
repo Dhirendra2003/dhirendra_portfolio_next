@@ -100,12 +100,12 @@ export default function Card08({
         <div className="absolute top-3 right-3">
           <span
             className={cn(
-              "px-2.5 py-1 rounded-lg text-xs font-medium",
-              "bg-white/90 text-zinc-800",
-              "dark:bg-zinc-900/90 dark:text-zinc-200",
-              "backdrop-blur-md",
-              "shadow-xs",
-              "border border-white/20 dark:border-zinc-800/50",
+              "px-2.5 py-1.5 rounded-lg text-md font-bold",
+              "bg-white/90 text-black",
+              "group-hover:bg-black/90 group-hover:text-white",
+              "transition-all duration-800 ease-in-out",
+              "shadow-lg",
+              
             )}
           >
             {badge.text}
@@ -115,10 +115,10 @@ export default function Card08({
         <div className="absolute bottom-0 left-0 right-0 p-5">
           <div className="flex items-center justify-between gap-3">
             <div className="space-y-1.5">
-              <h3 className="text-lg font-semibold text-white dark:text-zinc-100 leading-snug tracking-tighter">
+              <h3 className="text-2xl font-semibold text-white dark:text-zinc-100 leading-snug ">
                 {title}
               </h3>
-              <p className="text-sm text-zinc-200 dark:text-zinc-300 line-clamp-2 tracking-tight">{subtitle}</p>
+              <p className="text-md text-zinc-200 dark:text-zinc-300 line-clamp-2 tracking-tight">{subtitle}</p>
             </div>
             <div
               className={cn(
@@ -140,14 +140,14 @@ export default function Card08({
     </Link>
     <div className="flex flex-col  gap-5  max-w-[45%]">
       {/* project description : languages, techstack , description */}
-      <p className={`text-2xl text-${orientation==="left" ? "left" : "right"}    text-zinc-200 dark:text-zinc-300  tracking-tight`}>
+      <p className={`text-2xl ${orientation!='left' && "right-text"}    text-zinc-200 dark:text-zinc-300  tracking-tight`}>
         <b>Languages:</b> {project_detail.languages}
       </p>
       <div className="flex flex-col">
-      <p className={`text-2xl text-${orientation==="left" ? "left" : "right"}   text-zinc-200 dark:text-zinc-300  tracking-tight`}>
+      <p className={`text-2xl text-zinc-200 dark:text-zinc-300  tracking-tight ${orientation!='left' && "right-text"} `}>
         <b>Tech Stack:</b> 
       </p>
-      <div className={`flex flex-wrap gap-2 my-2 ml-${orientation === 'left' ? '0' : 'auto'}`}>
+      <div className={` flex flex-wrap gap-2 my-2 ml-${orientation == 'left' ? '0' : 'auto'}`}>
         {stack_img_array.map((tech) => (
           <div key={tech} className={`flex items-center mb-2`}>
             {icons_array[tech.trim()] && (
@@ -156,14 +156,14 @@ export default function Card08({
                 alt={tech.trim()}
                 width={50}
                 height={50}
-                className="mr-2 h-12 w-12 object-contain"
+                className="mr-2 h-12 w-12 object-contain bg-gradient-to-br from-violet-700 to-black p-2 rounded-xl hover:scale-150 transition-transform duration-300 ease-in-out"
               />
             )}
           </div>
         ))}
       </div>
       </div>
-      <p className={`text-2xl text-${orientation==="left" ? "left" : "right"}  text-zinc-200 dark:text-zinc-300  tracking-tight`}>
+      <p className={`text-2xl ${orientation!='left' && "right-text"}  text-zinc-200 dark:text-zinc-300  tracking-tight`}>
         <b>Description:</b> {project_detail.description}
       </p>
     </div>

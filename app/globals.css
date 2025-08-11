@@ -192,3 +192,6 @@ html {
       z-index: 20;
     }
   }
+.right-text{
+  text-align: right;
+}

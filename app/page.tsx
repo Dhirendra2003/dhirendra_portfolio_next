@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { Github, Linkedin, Twitter, Mail, Phone, Globe, Instagram, Boxes, ExternalLink } from 'lucide-react'
+import { Github, Linkedin, Twitter, Mail, Phone, Globe, Instagram, Boxes, ExternalLink ,Download, Telescope, Briefcase,Laptop, Grid, LayoutGrid} from 'lucide-react'
 import { motion, useMotionValue, useSpring, useScroll, useTransform } from "framer-motion"
 import { Tilt } from "@/components/tilt"
 import { ThreeScene } from "@/components/three-scene"
@@ -24,23 +24,7 @@ import Card08Props from "@/components/card-project"
 import Footer from "@/components/footer"
 
 const collections: Card08Props[] = [
-  {
-    title: "OLD -Personal Portfolio REACT JS",
-    subtitle: "made with most fancy libraries",
-    image: "/old_port.jpg",
-    project_link: "https://portfolio-react-psi-violet.vercel.app/",
-    orientation: "left",
-    badge: {
-      text: "Deployed",
-      variant: "orange"
-    },
-    href: "https://portfolio-react-psi-violet.vercel.app/",
-    project_detail: {
-      languages: "JavaScript, CSS ,HTML ",
-      tech_stack: "react, tailwind, gsap, framer ,vercel ,blender , canva",
-      description: "My personal portfolio built with React, animations using GSAP and Framer Motion, fully responsive design Deployed with Vercel."
-    }
-  },
+  
   {
     title: "Work Nest MERN",
     subtitle: "job portal with recruiter & applicant interfaces",
@@ -76,6 +60,23 @@ const collections: Card08Props[] = [
     }
   },
   {
+    title: "Micro E-commerce",
+    subtitle: "A minimalistic e-commerce platform",
+    image: "/mirco-ecom.jpg",
+    project_link: "https://github.com/Dhirendra2003/mini-e-commerce-django",
+    orientation: "left",
+    badge: {
+      text: "Github",
+      variant: "orange"
+    },
+    href: "https://github.com/Dhirendra2003/mini-e-commerce-django",
+    project_detail: {
+      languages: "Python ,HTML, CSS",
+      tech_stack: "python, django,html5 ,css3, stripe, docker, neondb, backblaze s3",
+      description: "Micro e-commerce platform made with python-Django templates & NeonDB for digital assets, integrated with Stripe for payments, Backblaze S3 for media storage & Docker for containerization."
+    }
+  },
+  {
     title: "PaperTrade",
     subtitle: "Practice trading app made using MERN stack",
     image: "/paper trade.webp",
@@ -93,22 +94,22 @@ const collections: Card08Props[] = [
     }
   },
   {
-    title: "Micro E-commerce",
-    subtitle: "A minimalistic e-commerce platform",
-    image: "/mirco-ecom.jpg",
-    project_link: "https://github.com/Dhirendra2003/mini-e-commerce-django",
+    title: "OLD -Personal Portfolio REACT JS",
+    subtitle: "made with most fancy libraries",
+    image: "/old_port.jpg",
+    project_link: "https://portfolio-react-psi-lime.vercel.app/",
     orientation: "left",
     badge: {
-      text: "Github",
+      text: "Deployed",
       variant: "orange"
     },
-    href: "https://github.com/Dhirendra2003/mini-e-commerce-django",
+    href: "https://portfolio-react-psi-lime.vercel.app/",
     project_detail: {
-      languages: "Python ,HTML, CSS",
-      tech_stack: "python, django,html5 ,css3, stripe, docker, neondb, backblaze s3",
-      description: "Micro e-commerce platform made with python-Django templates & NeonDB for digital assets, integrated with Stripe for payments, Backblaze S3 for media storage & Docker for containerization."
+      languages: "JavaScript, CSS ,HTML ",
+      tech_stack: "react, tailwind, gsap, framer ,vercel ,blender , canva",
+      description: "My personal portfolio built with React, animations using GSAP and Framer Motion, fully responsive design Deployed with Vercel."
     }
-  }
+  },
 ]
 
 const descriptions = [
@@ -138,13 +139,7 @@ export default function Page() {
     return () => io.disconnect()
   }, [])
 
-  // // Scroll-driven background dark-to-light transition
-  // const { scrollYProgress } = useScroll()
-  // // Interpolate background lightness and text color
-  // const bgLightness = useTransform(scrollYProgress, [0, 1], [6, 96]) // 6% -> 96% lightness
-  // const textLightness = useTransform(scrollYProgress, [0, 1], [90, 10]) // text goes darker as bg lightens
-  // const bgColor = useTransform(bgLightness, (l) => `hsl(240 10% ${l}%)`)
-  // const textColor = useTransform(textLightness, (l) => `hsl(0 0% ${l}%)`)
+
 
   return (
     <>
@@ -171,10 +166,15 @@ export default function Page() {
                 <span className="size-2 rounded-full bg-gradient-to-br from-fuchsia-500 via-pink-500 to-amber-400 animate-pulse" />
                 Available for Full Time Roles
               </div>
-              <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight">
-                Full-Stack Developer
-                <br />
-                <span className="text-gradient">UI Designer</span> crafting delight
+              <h1 className="mt-8 text-xl md:text-xl font-bold leading-tight">
+                <span className="text-4xl">👋</span> Hello there, I'm
+              </h1>
+              <h1 className=" text-7xl font-bold leading-tight text-nowrap">
+                Dhirendra Shinde 
+              </h1>
+              <h1 className="mt-4 text-2xl  font-bold leading-tight">
+                Full-Stack Developer |
+                UI Designer | crafting delight 🧑‍💻
               </h1>
               <p className="mt-4  md:text-xl text-white">
                 I build dynamic and user-friendly digital experiences with MERN & Django  and expressive UI motion.
@@ -183,7 +183,7 @@ export default function Page() {
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Button asChild size="lg" className=" underline_hover bg-gradient-to-br from-fuchsia-600 via-pink-600 to-amber-500 text-white shadow-lg hover:shadow-xl">
-                  <a href="/resume.pdf" download>Download Resume</a>
+                  <a href="https://drive.google.com/file/d/1TsxozR6M8wvBzsK5tNl6GVGsV1qafxTA/view?usp=drive_link" target="_blank">Download Resume <Download/></a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="  text-black underline_hover ">
                   <a href="https://linktr.ee/dhiru2003" target="_blank" rel="noreferrer">
@@ -199,13 +199,13 @@ export default function Page() {
                 <a href="https://www.linkedin.com/in/dhirendra-shinde-b9a826215" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                   <Linkedin className="icon-link" />
                 </a>
-                <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="Twitter">
+                <a href="https://x.com/dhiru2003" target="_blank" rel="noreferrer" aria-label="Twitter">
                   <Twitter className="icon-link" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/pixel_renderer_8bit/" target="_blank" rel="noreferrer" aria-label="Instagram">
                   <Instagram className="icon-link" />
                 </a>
-                <a href="https://sketchfab.com" target="_blank" rel="noreferrer" aria-label="Sketchfab">
+                <a href="https://sketchfab.com/shindedhirendra780" target="_blank" rel="noreferrer" aria-label="Sketchfab">
                   <Boxes className="icon-link" />
                 </a>
               </div>
@@ -229,7 +229,7 @@ export default function Page() {
                     />
                     <div className="p-4">
                       <div className="font-semibold">Dhirendra Shinde</div>
-                      <div className="text-sm text-neutral-300">Pune, India</div>
+                      <div className="text-sm text-neutral-300">📍 Pune, India</div>
                     </div>
                   </div>
                 </Tilt>
@@ -243,20 +243,20 @@ export default function Page() {
 
         {/*WorkExperience   */}
         <section id="experience" className="container mx-auto px-6  md:py-4">
-          <h3 className="text-2xl md:text-4xl text-white font-semibold mt-12">Hands-on Experience</h3>
+          <h3 className="text-2xl md:text-4xl text-white font-semibold mt-12 flex ">Hands-on Experience <Laptop  className="mx-2 h-10 w-10 text-cyan-200"/></h3>
           <WorkExperience />
         </section>
 
         {/* PROJECTS */}
         <section id="projects" className="container mx-auto px-6  md:py-4">
-          <h3 className="text-2xl md:text-4xl text-white font-semibold mt-12">Personal Projects</h3>
+          <h3 className="text-2xl md:text-4xl text-white font-semibold mt-12 flex">Personal Projects <Telescope className="mx-2 h-10 w-10 text-cyan-200"/></h3>
           <CardGrid items={collections} gridTitle="Collections 2025 - Summer" />
         </section>
 
         {/* INTERACTIVE GALLERY GRID */}
         <section id="gallery" className="container mx-auto px-6 py-16 md:py-24">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="text-3xl md:text-4xl font-semibold">Creations Gallery</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold flex">Creations Gallery <LayoutGrid className="mx-2 h-10 w-10 text-cyan-200"/></h2>
             <p className="text-muted-foreground">Hover to see the magic</p>
           </div>
           <div className="mt-8">

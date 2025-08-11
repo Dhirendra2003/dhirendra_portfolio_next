@@ -80,7 +80,7 @@ export function GalleryHoverGrid({ items, defaultCols = { base: 2, md: 4, lg: 6 
                 )}
                 sizes="(max-width: 1024px) 33vw, 16vw"
               />
-              <h1 className="absolute inner-element mt-[20%] text-white rounded-lg bg-violet-600/30 px-2  text-xl font-bold">{it.desc || "Description"}</h1>
+              <h1 className="absolute inner-element mt-[20%] text-white rounded-lg bg-black/70 px-2  text-xl font-medium">{it.desc || "Description"}</h1>
             </Tilt>
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-transparent to-white/[0.02]" />
           </div>

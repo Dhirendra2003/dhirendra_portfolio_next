@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { TechCard } from '@/app/page'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import { DraftingCompass } from 'lucide-react'
 // import { data } from "@/lib/data"
 
 const Skills = ({data}) => {
@@ -10,7 +11,7 @@ const Skills = ({data}) => {
     <section id="skills" className="container text-white mx-auto px-6 py-16 md:py-24">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold">Skills, Tools & Education</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold flex ">Skills, Tools & Education <DraftingCompass className="mx-2 h-10 w-10 text-cyan-200"/></h2>
             <p className="text-white">I love expressive UIs, robust APIs, and clean architecture.</p>
           </div>
           <Badge variant="secondary" className="h-12 w-64 text-rose-500 text-lg bg-white font-black uppercase">
